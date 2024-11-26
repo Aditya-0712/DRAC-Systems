@@ -1,0 +1,64 @@
+.home .table {
+    flex-direction: column;
+    border-radius: 0.66vw;
+    background-color: white;
+    padding: 1.31vw;
+    margin: 0.99vw auto 0 auto;
+    width: 46vw;
+    padding-bottom: 6.57vw;
+}
+
+.home .table .title, .home .table .add {
+    font: 0.85vw montserrat-medium;
+    padding: 0.66vw 0.99vw;
+    background-color: #ebedfe;
+    color: #3943f0;
+    border-radius: 0.33vw;
+}
+
+.home .table .add {
+    margin: auto 0 auto auto;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.home .table .attr {
+    width: 100%;
+    margin: 0.66vw 0 0 0;
+    padding: 0.66vw 0;
+    border-bottom: 0.07vw solid black;
+}
+
+.home .table .attr p {
+    display: block;
+    font: 0.85vw montserrat-bold;
+    color: #3a3a3a;
+    width: 16.42vw;
+    margin: auto 0;
+    text-align: center;
+}
+
+.home .table .tuple {
+    padding: 0.66vw 3vw;
+    border-bottom: 0.07vw solid rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.home .table .tuple p {
+    font: 0.85vw montserrat-medium;
+    color: #3a3a3a;
+    width: 17.09vw;
+}
+
+.home .table .tuple img {
+    width: 1.18vw;
+    height: 1.18vw;
+    padding: 0.66vw;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    right:1.5vw;
+}
+
+.home .table .tuple img:hover{background-color: rgba(0, 0, 0, 0.09);}

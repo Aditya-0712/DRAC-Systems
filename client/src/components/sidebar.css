@@ -1,0 +1,30 @@
+.sidebar {
+    flex-direction: column;
+    width: 19.72vw;
+    margin: 0;
+    height: 100vh;
+    background-color: #424769;
+}
+
+.sidebar .opt {
+    width: 100%;
+    padding: 0.66vw 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.sidebar .opt:hover {
+    background-color: #343856;
+}
+
+.sidebar .opt img {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: auto 0 auto 1.97vw;
+}
+
+.sidebar .opt p {
+    font: 1vw montserrat-medium;
+    color: white;
+    margin: auto auto auto 1.31vw;
+}

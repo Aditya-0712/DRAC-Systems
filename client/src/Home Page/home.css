@@ -1,0 +1,18 @@
+.home {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    background-color: #F4F6FF;
+}
+
+.home .title {
+    font: 0.99vw montserrat-bold;
+    color: #3a3a3a;
+    margin: 0 auto 0 0;
+}
+
+.home .desc {
+    font: 0.79vw montserrat-regular;
+    color: #3a3a3a;
+    margin: 0.33vw auto 0 0;
+}

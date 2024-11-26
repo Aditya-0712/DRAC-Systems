@@ -1,0 +1,161 @@
+*{display: flex; text-decoration: none;}
+
+head, head * {display: none}
+
+body, #root {
+    display: flex;
+    width:100%;
+    margin:0;
+    flex-direction: column;
+    font-size: 0;
+}
+
+.register{
+    flex-direction: column;
+    margin:auto;
+    width:100%;
+    height: 100vh;
+}
+
+.register .container {
+    margin:auto;
+    border-radius: 1.31vw;
+    background-color: #F4F6FF;
+    padding:0.66vw;
+    outline:0.07vw solid #2d325029;
+}
+
+.register .container .left{
+    flex-direction:column;
+    margin:0;
+    background-color: #424769;
+    border-radius: 1.31vw;
+    width:26.29vw;
+    height:39.43vw;
+}
+
+.register .container .left p:nth-child(1) {
+    font: 1.97vw montserrat-bold;
+    margin:auto auto 0 auto;
+    color:#7752FE;
+}
+
+.register .container .left p:nth-child(1) span{
+    color:#C499F3;
+}
+
+.register .container .left p:nth-child(2) {
+    font: 1.51vw montserrat-medium;
+    margin:1.31vw auto 0 auto;
+    color:white;
+}
+
+.register .container .left p:nth-child(3) {
+    font: 0.99vw montserrat-medium;
+    margin:0.66vw auto auto auto;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.register .container .right {
+    flex-direction:column;
+    margin:0;
+    border-radius: 1.31vw;
+    width:32.86vw;
+    height:39.43vw;
+}
+
+.register .container .right .main{
+    flex-direction: column;
+    background-color: white;
+    margin:auto;
+    border-radius: 1.31vw;
+    box-shadow: 0 0.99vw 3.29vw 0 #01222F26;
+    width:fit-content;
+    padding: 1.97vw;
+}
+
+.register .container .right .main .title{
+    font:1.18vw montserrat-regular;
+    color:#3a3a3a;
+    margin:0 auto 0 0;
+}
+
+.register .container .right .main .welcome{
+    font: 1.45vw montserrat-medium;
+    color:#3a3a3a;
+    margin:0.66vw auto 0 0;
+}
+
+.register .container .right .main .welcome span{
+    color:#7752FE;
+    font-family: montserrat-bold;
+    margin-left: 0.33vw;
+}
+
+.register .container .right .main form{
+    flex-direction: column;
+    margin:1.97vw auto 0 0;
+}
+
+.register .container .right .main form .label{
+    font:0.86vw montserrat-bold;
+    color:#3a3a3a;
+    margin:0 auto 0 0;
+}
+
+.register .container .right .main form .label span{
+    color:red;
+    font: 0.723vw montserrat-italic;
+    margin-left: 0.329vw;
+    line-height: 1.052vw;
+}
+
+.register form input[type="text"], .register form input[type="password"], .register form input[type="number"]{
+    margin: 0.66vw auto 1.31vw 0;
+    padding:0.66vw;
+    border-radius: 0.33vw;
+    border: 0.07vw solid #33333333;
+    width:23vw;
+}
+
+.register form input[type="number"]{width:19.71vw}
+
+.register .numberInp p{
+    font: 0.86vw montserrat-medium;
+    color:#3a3a3a;
+    background-color: #F6F6F6;
+    border: 0.07vw solid #33333333;
+    border-radius: 0.33vw;
+    padding:0.66vw;
+    margin:0.66vw 0.66vw auto auto;
+}
+
+.register .container .right .main form input:focus{outline:0.07vw solid #3a3a3a41}
+
+
+.register form button{
+    display: block;
+    width:100%;
+    margin: 1.31vw auto 0 auto;
+    border:0;
+    padding:0.66vw;
+    border-radius: 0.33vw;
+    color:white;
+    font:0.99vw montserrat-medium;
+    background-color: #424769;
+    cursor: pointer;
+}
+
+.register .container .right form .lnk{
+    font:0.79vw montserrat-medium;
+    color:#3a3a3a;
+    margin:0.66vw auto 0 auto;
+}
+
+.register .container .right form .lnk span{
+    margin-left:0.33vw;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}

@@ -1,0 +1,52 @@
+.topbar{
+    margin:0;
+    z-index: 2;
+    padding:0.99vw;
+    background-color: white;
+}
+
+.topbar .account{
+    margin:auto 0 auto 1.31vw;
+    padding:0.66vw;
+    border:0.07vw solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.topbar .account img{
+    width:1.45vw;
+    height:1.45vw;
+    margin:auto 0;
+}
+
+.topbar .account p{
+    font: 0.85vw montserrat-medium;
+    color:#3a3a3a;
+    margin:auto 0 auto 0.99vw; 
+}
+
+.topbar .app, .topbar .role{
+    font:0.99vw montserrat-bold;
+    color:#3a3a3a;
+    margin:auto 0 auto 5vw;
+}
+
+.topbar .app span, .topbar .role span{font-family: montserrat-medium; margin-left: 0.33vw}
+
+.topbar .logout{
+    font:0.85vw montserrat-bold;
+    color:white;
+    padding:0.66vw 0.99vw;
+    background-color: #424769;
+    margin:auto 3.29vw auto auto;
+    cursor: pointer;
+}
+
+.topbar .logo {
+    font: 1.97vw montserrat-bold;
+    margin:auto 1.31vw auto 0;
+    color:#7752FE;
+}
+
+.topbar .logo span{
+    color:#C499F3;
+}

@@ -1,0 +1,112 @@
+.adduser {
+    flex-direction: column;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.adduser .main {
+    flex-direction: column;
+    width: 39.43vw;
+    border-radius: 0.66vw;
+    margin: auto;
+    background-color: white;
+    padding: 1.31vw 1.31vw 3.94vw 1.31vw;
+}
+
+.adduser .main .header {
+    font: 0.99vw montserrat-bold;
+    color: #3a3a3a;
+    margin: auto auto auto 0;
+}
+
+.adduser .main .cross {
+    width: 1.44vw;
+    height: 1.44vw;
+    padding: 0.33vw;
+    border-radius: 0.33vw;
+    cursor: pointer;
+}
+
+.adduser .main .small {
+    font: 0.86vw montserrat-medium;
+    margin: 0.66vw auto 0.99vw 0;
+    color: #3a3a3a;
+}
+
+.adduser .main .roleSelect {
+    border-radius: 0.66vw;
+    margin: 0;
+    width: 100%;
+    padding: 0.99vw;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.adduser .main .roleSelect:hover {
+    background-color: #3a3a3a10;
+}
+
+.adduser .main .roleSelect span {
+    margin: auto 0.66vw;
+    border-radius: 50%;
+    border: 0.07vw solid rgba(0, 0, 0, 0.2);
+    width: 1.31vw;
+    height: 1.31vw;
+}
+
+.adduser .main .roleSelect div {
+    margin: 0 0 0 1.31vw;
+    flex-direction: column;
+}
+
+.adduser .main .roleSelect div p:nth-child(1) {
+    font: 0.99vw montserrat-bold;
+    color: #3a3a3a;
+    margin: auto auto auto 0;
+}
+
+.adduser .main .roleSelect div p:nth-child(2) {
+    font: 0.66vw montserrat-medium;
+    color: #3a3a3a;
+    margin: auto auto auto 0;
+}
+
+.adduser .main form {
+    flex-direction: column;
+    margin: 1.97vw auto 0 auto;
+}
+
+.adduser .main form .label {
+    font: 0.86vw montserrat-bold;
+    color: #3a3a3a;
+    margin: 0 auto 0 0;
+}
+
+.adduser .main form input {
+    margin: 0.66vw auto 1.31vw 0;
+    padding: 0.66vw;
+    border-radius: 0.33vw;
+    border: 0.07vw solid #33333333;
+    width: 30vw;
+}
+
+.adduser .main form input:focus {
+    outline: 0.07vw solid #3a3a3a41;
+}
+
+.adduser form button {
+    display: block;
+    width: 100%;
+    margin: 1.31vw auto 0 auto;
+    border: 0;
+    padding: 0.66vw;
+    border-radius: 0.33vw;
+    color: white;
+    font: 0.99vw montserrat-medium;
+    background-color: #424769;
+    cursor: pointer;
+}
