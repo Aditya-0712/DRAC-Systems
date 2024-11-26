@@ -93,3 +93,21 @@ exports.getBusinesses = async (req, res) => {
         res.status(500).send({ success: false, message: "Unknown error" });
     }
 };
+
+exports.configureBusiness = async (req, res) =>{
+    const email = req.user.email;
+    const { name } = req.body;
+
+    try{
+        const userData = await userModel.findOne({email:email});
+        const userBusiness = await businessModel.findById(userData.business);
+        userBusiness.name = name;
+        await userBusiness.save();
+
+        res.status(200).send({success:true});
+    }
+    catch(err){
+        console.log("Error in configureBusiness\n" + err);
+        res.status(500).send({success:false, message:"Unknown error"});
+    }
+}

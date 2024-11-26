@@ -1,0 +1,40 @@
+.configure{
+    background-color: #F4F6FF;
+    margin: 0;
+}
+
+.configure form {
+    flex-direction: column;
+    margin: 10vw auto 0 auto;
+}
+
+.configure form .label {
+    font: 0.86vw montserrat-bold;
+    color: #3a3a3a;
+    margin: 0 auto 0 0;
+}
+
+.configure form input {
+    margin: 0.66vw auto 1.31vw 0;
+    padding: 0.66vw;
+    border-radius: 0.33vw;
+    border: 0.07vw solid #33333333;
+    width: 30vw;
+}
+
+.configure form input:focus {
+    outline: 0.07vw solid #3a3a3a41;
+}
+
+.configure button {
+    display: block;
+    width: 100%;
+    margin: 1.31vw auto 0 auto;
+    border: 0;
+    padding: 0.66vw;
+    border-radius: 0.33vw;
+    color: white;
+    font: 0.99vw montserrat-medium;
+    background-color: #424769;
+    cursor: pointer;
+}

@@ -12,8 +12,8 @@ function Sidebar(){
         <div className="sidebar">
             <div className="opt" style={{marginTop:"2.629vw"}} onClick={() =>navigate("/home")} ><img src={home} alt="home" /><p>Home</p></div>
             <div className="opt" onClick={() =>navigate("/associatedBusinesses")}><img src={envelope} alt="business" /><p>Associated businesses</p></div>
-            <div className="opt"><img src={business} alt="business" /><p>Configure business</p></div>
-            <div className="opt"><img src={profile} alt="profile" /><p>Edit profile</p></div>
+            <div className="opt" onClick={() =>navigate("/configureBusiness")}><img src={business} alt="business" /><p>Configure business</p></div>
+            {/* <div className="opt"><img src={profile} alt="profile" /><p>Edit profile</p></div> */}
         </div>
     );
 }

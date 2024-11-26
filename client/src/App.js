@@ -4,6 +4,7 @@ import Login from './Login Page/Login';
 import Home from './Home Page/Home';
 import PrivateRoute from './private/PrivateRoute';
 import Businesses from './Businesses Page/Businesses';
+import Configure from './Configure Page/Configure';
 import { Toaster } from 'react-hot-toast';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/home" element={<PrivateRoute element={<Home />} />} />
                     <Route path="/associatedBusinesses" element={<PrivateRoute element={<Businesses />} />} />
+                    <Route path="/configureBusiness" element={<PrivateRoute element={<Configure />} />} />
                 </Routes>
             </Router>
         </>
