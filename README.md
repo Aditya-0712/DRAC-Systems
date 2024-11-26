@@ -50,7 +50,8 @@ This project implements an **Authentication**, **Authorization**, and **Role-Bas
    `npm install`
 
 3. Set up environment variables: Create a .env file in the root of your project and add:
-   ```PORT=5000
+   ```
+    PORT=5000
     DATABASE_URL=<your_database_url>
     JWT_SECRET=<your_jwt_secret>
 
