@@ -51,7 +51,7 @@ function Topbar(){
 
             <p className="logout" onClick={logout}>Logout</p>
 
-            <p className="logo">DRAC <span>Systems</span></p>
+            <p className="logo">RBAC <span>Systems</span></p>
         </div>
     );
 }

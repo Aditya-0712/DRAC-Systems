@@ -1,3 +1,40 @@
-.businesses{
+.businesses {
     background-color: #F4F6FF;
+    margin: 0;
+}
+
+.businesses .card {
+    flex-direction: column;
+    width: 42.73vw;
+    background-color: white;
+    margin: 1.31vw auto;
+    padding: 1.31vw;
+}
+
+.businesses .card p {
+    font: 0.86vw montserrat-bold;
+    margin: 0.66vw auto 0 0;
+    color: #3a3a3a;
+}
+
+.businesses .card p span {
+    font-family: montserrat-medium;
+    margin-left: 0.33vw;
+}
+
+.businesses .card .id {
+    font: 0.72vw montserrat-italic;
+    margin: 0 auto 0 0;
+}
+
+.businesses .card .options {
+    margin: 1.97vw auto 0 auto;
+}
+
+.businesses .card .options p {
+    padding: 0.66vw 0.99vw;
+    background-color: #ebedfe;
+    color: #3943f0;
+    margin: auto 1.31vw;
+    cursor: pointer;
 }

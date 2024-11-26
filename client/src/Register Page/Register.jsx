@@ -69,7 +69,7 @@ function Register() {
         <div className="register">
             <div className="container">
                 <div className="left">
-                    <p>DRAC <span> Systems</span></p>
+                    <p>RBAC <span> Systems</span></p>
                     <p>Join us today!</p>
                     <p>Simplify and streamline<br></br>your processes</p>
                 </div>
