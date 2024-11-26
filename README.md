@@ -31,6 +31,7 @@ This project implements an **Authentication**, **Authorization**, and **Role-Bas
 - Users can also be invited to other businesses and assigned roles by the respective Administrators.
 
 ## Technologies Used
+- **React.js**: Frontend
 - **Node.js**: Backend runtime.
 - **Express.js**: Web application framework.
 - **MongoDB**: Database for storing user and business data.
@@ -43,4 +44,15 @@ This project implements an **Authentication**, **Authorization**, and **Role-Bas
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd <repository-folder>
+   cd <repository-folder
+
+2. Install dependencies:
+   `npm install`
+
+3. Set up environment variables: Create a .env file in the root of your project and add:
+   ```PORT=5000
+    DATABASE_URL=<your_database_url>
+    JWT_SECRET=<your_jwt_secret>
+
+4. Run the server:
+   `npm start`
