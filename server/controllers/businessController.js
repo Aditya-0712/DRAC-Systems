@@ -26,10 +26,10 @@ exports.getPeople = async (req, res) =>{
 
 exports.addPeople = async (req, res) =>{
     const sessEmail = req.user.email;
-    const {name, role} = req.body;
+    const {name, role, personEmail} = req.body;
 
     try{
-        const userData = await userModel.findOne({email:sessEmail});
+        const userData = await userModel.findOne({email:personEmail});
 
         if (!userData){
             console.log("User does not exist");
@@ -37,9 +37,14 @@ exports.addPeople = async (req, res) =>{
             return;
         }
 
-        const businessData = await businessModel.findById(userData.business);
-        businessData.people.push({name, role});
+        const ownerData = await userModel.findOne({email:sessEmail});
+        const businessData = await businessModel.findById(ownerData.business);
+        const userId = userData?._id;
+        businessData.people.push({userId, name, role});
         await businessData.save();
+
+        userData.associations.push(ownerData.business);
+        await userData.save();
 
         res.status(201).send({success:true, message:"Person added"});
     }

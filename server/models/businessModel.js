@@ -5,11 +5,16 @@ const businessSchema = mongoose.Schema({
         type:String,
         default:""
     },
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
     people: [{
-        // userId: {
-        //     type:mongoose.Schema.Types.ObjectId,
-        //     ref: 'User'
-        // },
+        userId: {
+            type:mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: true
+        },
         name: {
             type:String,
             required: true

@@ -34,6 +34,9 @@ exports.register = async (req, res) =>{
             business:newBusiness._id
         });
 
+        newBusiness.createdBy = newUser._id;
+        await newBusiness.save();
+
         if (newBusiness && newUser){
             res.status(201).send({success:true, message:"Account created succesfully"});
             return;

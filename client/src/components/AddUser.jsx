@@ -1,6 +1,7 @@
 import "./adduser.css";
 import cross from "../images/cross.svg";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 function AddUser({setFlag}){
     const [role, setRole] = useState("Administrator");
@@ -18,13 +19,16 @@ function AddUser({setFlag}){
                 'Content-Type':'application/json',
                 'Authorization':`Bearer ${localStorage.getItem("token")}`
             },
-            body:JSON.stringify({name:formData.name, role:role})
+            body:JSON.stringify({name:formData.name, role:role, personEmail:formData.email})
         })
         .then(res1 =>res1.json())
         .then(res2 =>{
             console.log(res2);
             if (res2.success){
                 window.location="/home";
+            }
+            else{
+                toast.error(res2.message);
             }
         })
         .catch(err =>console.log(err));

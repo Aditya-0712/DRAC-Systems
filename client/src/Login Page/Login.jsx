@@ -48,7 +48,7 @@ function Login() {
                     }, 1000);
                 }
                 else{
-                    toast.error(res2.error);
+                    toast.error(res2.message);
                 }
             })
             .catch(err =>console.log(err));
