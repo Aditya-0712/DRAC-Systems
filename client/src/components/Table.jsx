@@ -1,6 +1,7 @@
 import "./table.css";
 import trash from "../images/trash.svg";
 import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 function Table({setFlag}){
     const [tuples, setTuples] = useState([]);
@@ -25,8 +26,36 @@ function Table({setFlag}){
     }, []);
     
     const renderTuples = tuples.map((x, ind) =>{
-        return (<div className="tuple" key={ind}><p>{x.name}</p><p>{x.role}</p><img src={trash} alt="delete" /></div>);
+        return (<div className="tuple" key={ind}><p>{x.name}</p><p>{x.role}</p><img src={trash} alt="delete" onClick={() =>deletePerson(x.userId)} /></div>);
     });
+
+    const deletePerson = async (userId) => {
+        try {
+            const response = await fetch(`http://localhost:5000/api/v1/deletePerson`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem("token")}`,
+                },
+                body: JSON.stringify({userId: userId }),
+            });
+    
+            const data = await response.json();
+    
+            if (response.ok && data.success) {
+                toast.success(data.message);
+    
+                setTimeout(() => {
+                    window.location.href = "/home";
+                }, 1000);
+            } else {
+                toast.error(data.message || "Failed to delete the person.");
+            }
+        } catch (error) {
+            console.error("Error deleting person:", error);
+            toast.error("An error occurred. Please try again later.");
+        }
+    };    
 
     return (
         <div className="table">

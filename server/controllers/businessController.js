@@ -111,3 +111,30 @@ exports.configureBusiness = async (req, res) =>{
         res.status(500).send({success:false, message:"Unknown error"});
     }
 }
+
+exports.deletePerson = async (req, res) =>{
+    const email = req.user.email;
+    const { userId } = req.body;
+
+    try{
+        const userData = await userModel.findOne({email:email});
+
+        if (!userData){
+            console.log("User does not exist");
+            res.status(404).send({success:false, message:"User does not exist"});
+            return;
+        }
+
+        await userModel.findOneAndUpdate({_id:userId}, {$pull: {associations: userData.business}});
+
+        const businessData = await businessModel.findById(userData.business);
+        businessData.people = businessData.people.filter(person => person.userId===userId);
+        await businessData.save();
+
+        res.status(200).send({success:true, message:"Person removed from your business"});
+    }
+    catch(err){
+        console.log("Error in deletePerson\n" + err);
+        res.status(500).send({success:false, message:"Unknown error"});
+    }
+}
